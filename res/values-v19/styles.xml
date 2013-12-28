@@ -3,5 +3,7 @@
     <style name="Theme.TransparencyDemo" parent="@android:style/Theme.Holo.Light">
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">@bool/transparent_nav</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:clipToPadding">false</item>
     </style>
 </resources>
