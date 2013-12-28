@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="kitkat_displacement">0dp</dimen>
+    <dimen name="navbar_displacement">0dp</dimen>
 </resources>
