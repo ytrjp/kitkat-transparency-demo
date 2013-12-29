@@ -46,5 +46,7 @@ public class DemoFragment extends Fragment {
                 ((FragmentDemoActivity) getActivity()).setFragment(new DemoFragment(), mStartAt + position);
             }
         });
+
+        FragmentDemoActivity.setInsets(getActivity(), list);
     }
 }
