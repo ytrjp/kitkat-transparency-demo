@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import com.afollestad.kitkattransprencydemo.R;
+import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 /**
  * @author Aidan Follestad (afollestad)
@@ -47,6 +48,12 @@ public class DemoFragment extends Fragment {
             }
         });
 
-        FragmentDemoActivity.setInsets(getActivity(), list);
+        setInsets(list);
+    }
+
+    private void setInsets(View view) {
+        SystemBarTintManager tintManager = new SystemBarTintManager(getActivity());
+        SystemBarTintManager.SystemBarConfig config = tintManager.getConfig();
+        view.setPadding(0, config.getPixelInsetTop(true), config.getPixelInsetRight(), config.getPixelInsetBottom());
     }
 }
