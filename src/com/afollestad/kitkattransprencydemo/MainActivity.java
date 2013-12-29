@@ -29,13 +29,17 @@ public class MainActivity extends Activity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 startActivity(new Intent(MainActivity.this, FragmentDemoActivity.class)
-                        .putExtra("start_at", position));
+                        .putExtra("start_at", position + 1));
             }
         });
 
+        setupTint(this);
+    }
+
+    public static void setupTint(Activity context) {
         // Only set the tint if the device is running KitKat or above
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            SystemBarTintManager tintManager = new SystemBarTintManager(this);
+            SystemBarTintManager tintManager = new SystemBarTintManager(context);
             tintManager.setStatusBarTintEnabled(true);
             tintManager.setStatusBarTintResource(R.color.status_bar_tint);
         }
